@@ -1,0 +1,72 @@
+body {
+    width: 80rem;
+    height: 60vh;
+    background-image: url(../Assets/img/background-bedroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+div {
+    position: relative;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    margin: 10rem auto 0;
+    text-align: center;
+
+}
+
+img {
+    position: absolute;
+    width: 7rem;
+    aspect-ratio: 1/1;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    color: antiquewhite;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+div img:nth-child(1) {
+    width: 15rem;
+    right: 0;
+    top: -75px;
+}
+
+div img:nth-child(3) {
+    width: 10rem;
+    left: 18px;
+    bottom: -53px;
+    transform: scaleX(-1);
+}
+
+.btn {
+    width: 20rem;
+    margin: 2rem auto 10rem;
+}
+
+button {
+    appearance: none;
+    width: 100%;
+    padding: .5rem 1rem;
+    border:1px solid #4c3f58;
+    border-radius: .5rem;
+    background-color: #4c3f58;
+    font-family: "Nosifer", sans-serif;
+    color: rgb(122, 32, 32);
+    box-shadow: inset 0px 1px 0px 0px #584a48;
+    cursor: pointer;
+
+    &:hover {
+        background: #665476;
+    }
+
+    &:active {
+        position:relative;
+	    top:1px;
+    }
+}

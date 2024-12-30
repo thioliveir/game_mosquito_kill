@@ -1,0 +1,126 @@
+body {
+    width: 80rem;
+    height: 60vh;
+    background-image: url(../Assets/img/background-bedroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+div:nth-of-type(1) {
+    position: relative;
+    width: 51rem;
+    display: flex;
+    justify-content: center;
+    margin: 8rem auto 0;
+    text-align: center;
+
+}
+
+img {
+    position: absolute;
+    width: 7rem;
+    aspect-ratio: 1/1;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    color: antiquewhite;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+div img:nth-child(1) {
+    width: 15rem;
+    left: 97px;
+    top: -75px;
+    transform: scaleX(-1);
+}
+
+div img:nth-child(3) {
+    width: 10rem;
+    right: 18px;
+    bottom: -53px;
+    
+}
+
+.btn {
+    width: 20rem;
+    margin: 2rem auto 10rem;
+}
+
+button {
+    appearance: none;
+    width: 100%;
+    padding: .5rem 1rem;
+    border:1px solid #4c3f58;
+    border-radius: .5rem;
+    background-color: #4c3f58;
+    font-family: "Nosifer", sans-serif;
+    color: rgb(122, 32, 32);
+    box-shadow: inset 0px 1px 0px 0px #584a48;
+    cursor: pointer;
+
+    &:hover {
+        background: #665476;
+    }
+
+    &:active {
+        position:relative;
+	    top:1px;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    margin: 1rem auto 0;
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    max-width: 19rem;
+
+    & label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: antiquewhite;
+    }
+
+    & select {
+        appearance: none;
+        width: 100%;
+        padding: 8px 30px 8px 15px;
+        border: none;
+        background-color: #17171A;
+        color: #AFABB6;
+        font-size: 1rem;
+
+        & option {
+            color: #AFABB6;
+            font-size: .875rem;
+            letter-spacing: .02625rem;
+        }
+
+    }
+
+    & .icon-wrapper {
+        margin: 0;
+        width: 2.5rem;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background-color: rgb(58, 57, 57);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        
+        & .icon {
+            width: 1.5rem;
+            aspect-ratio: 1/1;
+            position: static;
+            transform: none;
+
+        }
+    }
+}

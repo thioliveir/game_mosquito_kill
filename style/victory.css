@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+  
+.glowing {
+    position: relative;
+    min-width: 700px;
+    height: 550px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+}
+  
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+  
+@keyframes colorChange {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+  
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+  
+.glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+}
+  
+.glowing span:nth-child(3n + 1)::before {
+    background: rgba(134,255,0,1);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+      0 0 40px rgba(134,255,0,1),
+      0 0 60px rgba(134,255,0,1),
+      0 0 80px rgba(134,255,0,1),
+      0 0 0 8px rgba(134,255,0,.1);
+}
+  
+.glowing span:nth-child(3n + 2)::before {
+    background: rgba(255,214,0,1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+      0 0 40px rgba(255,214,0,1),
+      0 0 60px rgba(255,214,0,1),
+      0 0 80px rgba(255,214,0,1),
+      0 0 0 8px rgba(255,214,0,.1);
+}
+  
+.glowing span:nth-child(3n + 3)::before {
+    background: rgba(0,226,255,1);
+    box-shadow: 0 0 20px rgba(0,226,255,1),
+      0 0 40px rgba(0,226,255,1),
+      0 0 60px rgba(0,226,255,1),
+      0 0 80px rgba(0,226,255,1),
+      0 0 0 8px rgba(0,226,255,.1);
+}
+  
+.glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+}
+  
+.glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+}
+  
+.glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+}
+  
+@keyframes animate {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+@keyframes animate-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+.btn {
+    position: absolute;
+    width: 30rem;
+    text-align: center;
+
+    & h1 {
+        font-family: "Press Start 2P", system-ui;
+        color: antiquewhite;
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    & button {
+        appearance: none;
+        width: 80%;
+        padding: .5rem 1rem;
+        border:1px solid #4c3f58;
+        border-radius: .5rem;
+        background-color: #4c3f58;
+        font-family: "Nosifer", sans-serif;
+        color: rgb(122, 32, 32);
+        box-shadow: inset 0px 1px 0px 0px #584a48;
+        cursor: pointer;
+    
+        &:hover {
+            background: #665476;
+        }
+    
+        &:active {
+            position:relative;
+            top:1px;
+        }
+    }
+}
